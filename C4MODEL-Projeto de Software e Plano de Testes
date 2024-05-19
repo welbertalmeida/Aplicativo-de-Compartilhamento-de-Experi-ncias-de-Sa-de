@@ -1,0 +1,63 @@
+Para o projeto do aplicativo de compartilhamento de experiências de saúde, o modelo C4 é uma escolha sólida para representar a arquitetura do sistema de forma clara e concisa. Vamos criar uma documentação para a arquitetura e um plano de testes para a aplicação.
+
+### Arquitetura do Projeto:
+
+#### Contexto do Sistema:
+![Diagrama de Contexto do Sistema: Aplicativo de Compartilhamento de Experiências de Saúde](link_para_o_diagrama)
+
+**Descrição:**
+Este diagrama descreve o contexto do sistema, mostrando as interações do aplicativo de compartilhamento de experiências de saúde com outros sistemas e atores externos, como usuários e APIs externas.
+
+#### Diagrama de Contêineres:
+![Diagrama de Contêineres: Aplicativo de Compartilhamento de Experiências de Saúde](link_para_o_diagrama)
+
+**Descrição:**
+O diagrama de contêineres detalha a arquitetura interna do aplicativo, identificando os principais componentes e como eles se comunicam entre si.
+
+#### Diagrama de Componentes:
+![Diagrama de Componentes: Aplicativo de Compartilhamento de Experiências de Saúde](link_para_o_diagrama)
+
+**Descrição:**
+Este diagrama mostra os componentes internos do aplicativo, como autenticação de usuários, gerenciamento de postagens e interação com APIs externas.
+
+#### Diagrama de Código:
+![Diagrama de Código: Aplicativo de Compartilhamento de Experiências de Saúde](link_para_o_diagrama)
+
+**Descrição:**
+O diagrama de código oferece uma visão detalhada da estrutura interna do código-fonte do aplicativo, mostrando as principais classes e suas interações.
+
+**Justificativa das Escolhas Tecnológicas:**
+- Utilizamos tecnologias web modernas, como React para o frontend e Node.js para o backend, devido à sua popularidade, robustez e ampla comunidade de suporte.
+- Para o banco de dados, optamos pelo MongoDB devido à sua flexibilidade de esquema e capacidade de lidar com dados não estruturados, como as postagens dos usuários.
+- A autenticação de usuários é implementada utilizando JSON Web Tokens (JWT) para segurança e escalabilidade.
+
+### Plano de Testes da Aplicação:
+
+#### Caso de Teste 1: Registro de Novo Usuário
+1. **Descrição:** Verificar se um novo usuário pode se registrar com sucesso no aplicativo.
+2. **Pré-condições:** O usuário não está registrado no sistema.
+3. **Passos:**
+   - O usuário acessa a página de registro.
+   - O usuário preenche o formulário de registro com informações válidas.
+   - O usuário envia o formulário.
+4. **Resultado Esperado:** O usuário é registrado com sucesso e redirecionado para a página inicial.
+
+#### Caso de Teste 2: Publicação de uma Experiência
+1. **Descrição:** Testar se um usuário pode publicar uma nova experiência de saúde no aplicativo.
+2. **Pré-condições:** O usuário está autenticado no sistema.
+3. **Passos:**
+   - O usuário acessa a página de criação de postagens.
+   - O usuário preenche o formulário de criação de postagem com informações válidas.
+   - O usuário envia a postagem.
+4. **Resultado Esperado:** A postagem é publicada com sucesso e aparece na página principal do aplicativo.
+
+#### Caso de Teste 3: Busca por Experiências
+1. **Descrição:** Verificar se os usuários podem buscar experiências de saúde específicas no aplicativo.
+2. **Pré-condições:** Existem postagens de experiências de saúde no sistema.
+3. **Passos:**
+   - O usuário acessa a barra de pesquisa.
+   - O usuário digita palavras-chave relacionadas à experiência que deseja encontrar.
+   - O usuário pressiona Enter para buscar.
+4. **Resultado Esperado:** O sistema retorna uma lista relevante de postagens de acordo com as palavras-chave inseridas.
+
+Este plano de testes aborda os principais casos de uso do aplicativo e garante que as funcionalidades essenciais estejam funcionando corretamente.
